@@ -1,0 +1,697 @@
+/* النجمة هاي يعني الاوامر الجوا تشتغل على الكل  */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    list-style: none;
+    /* خاص باللستة النقطة القبلها تلغيها  */
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* نوع الخط  */
+    transition: all 0.3s ease-in-out;
+    /* هذا خليناه احسن من ما كلساع نخليه بالتاك الاصلي */
+    
+}
+body{
+    margin: 0%;
+    /* font-family:"open sans",san-serifi; */
+    font-size: 1rem;
+    /* الافتراضي هذا  */
+    font-weight: 400;
+    /* هذا السمك مال الخط */
+    line-height: 1.5;
+    /* المسافة بين كل خط  */
+    color: black;
+    text-align: left;
+    /* هاي منين يبدي الحجي */
+    background-color: white;
+    overflow-x:hidden;
+    /* هاي الاوفر فلو عن طريقها يجوز تتحكم بهاي الي تنزل وتصعد الصفحة  */
+
+}
+
+/* ===========start screen reprosition============= */
+.container{
+    margin: 0 auto;
+    padding: 0 40px ;
+}
+/* هنا اخذ من العرض اربعين من الجهتين فصار يبدي من ذيج الجهة  */
+
+/* Big */
+@media (min-width: 1200px) { .container{
+    width: 1170px;
+}
+}
+
+/* Meidium */
+@media (min-width: 992px) { .container{
+    width: 970px;
+}
+}
+
+/* Small */
+@media (min-width: 768px) { .container{
+    width: 750px;
+}
+}
+/* هاي علمود يرتب الصفحة للشاشة الجبيرة والوسط والصغيرة وعن طريقها تصير الصفحة مرتبة يصير الشغل من النص يبدي مو من بداية الصفحة   */
+/* ملاحظة ثانية باقي الصفحة ورا ما تكمل كل جزء بيها تخلي هذن الاكواد وتخلي بمكان المني ماكس وتخلي التعديلات الي تريدها مثل ما مسوي جوا */
+
+/* ===========  End screen reprosition=============== */
+
+/* ==========start nav bar============= */
+
+.nav-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000000000;
+
+/* هاي خلينا البوزشن ابسلوت حتى يكون حر وحده 
+هاي الحدود حتى يكون  ببداية الصفحة والودث حتى ينملي 
+الزي اندكس لان صار جوا الصورة 
+*/
+/* بعد هم شغلة الكونتينر خلينا ال زي اندكس عالي فصارت الكتابة جواه فمن سوينا هوفر صار اكو حاجب علينا الزي اندكس فصار ليفوك الناف بار */
+}
+
+
+.nav-bar .container{
+    display: flex; 
+    justify-content: space-between;
+    border-bottom: solid 1px;
+    height: 12vh;
+    align-items: center;
+
+}
+
+.nav-bar .container .links ul{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-direction:row-reverse;
+}
+/* ملاحظة الفلسك هيج بدون دايركشن يرتب العناصر بشكل افقي بعد يشتغل على العناصر الي جوا التاك الي خليناه
+يعني اذا عدنا دف جوا الدف اكو دف ثاني وجوا الدف الثاني اكو هواي شغلات ووجهنا للدف الاول كلشي ماراح يصير لان بس عنصر واحد لذلك وجهناه
+هنا لل ul  */
+
+.nav-bar .container .logo a{
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+}
+.nav-bar .container .links a{
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+}
+.nav-bar .container .links .home{
+    /* width: 100px; */
+    /* height: 50px; */
+    /* الطول والعرض مايشتغل على عناصر ال انلاين لازم بلوك  */
+    display: block;
+    /* text-align: center; */
+    padding: 10px 20px;
+    /* البادنك احسن خالاه بالنص الباقيات جربهن شلعان كلب خليته للتوضيح  */
+    background-color: #532668;
+    color: white;
+    
+}
+
+.nav-bar .container .links ul li a:hover{
+    color: #532668;
+}
+.nav-bar .container .links ul li .home:hover{
+    background-color: white;
+}
+.nav-bar .container .logo a:hover{
+    color: #532668;
+}
+
+/* Big */
+@media (max-width: 1200px) {
+}
+
+/* Meidium */
+@media (max-width: 992px) {
+}
+
+
+/* Small */
+@media (max-width: 768px) { 
+    .nav-bar .container .links{
+        display: none;
+    }
+}
+
+
+/* ==========end nav bar============= */
+
+
+
+
+
+/*  =========start landing page========= */
+.landing-page{
+background-image: url(/img/forms-header.jpg);
+/* هاي تخلي الصورة بالخلفية اليوارال هاي مثل ال دبليو دبليو دبليو دوت ورها تجي الاقواس  */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+/* هاي تخص الصورة الاولى تخليها تغطي الشاشة الثانية توسطها الثالثة تخليها ماتنعاد  */
+position: relative;
+
+/*هاي حتى اخلي الجزء ابو الباك كراوند يتحرك نسبة للاب الي بيه بوزشن ريلتف  */
+}
+
+.landing-page .background{
+    position: absolute; left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #fff 0%, rgba(105, 90, 166, 0.35) 99%, rgba(105, 90, 166, 0.5) 100%);
+    /* هاي اول شي خلاها وحدها بدون الكونتينر علمود تمشي نسبة الى العنصر الاب الي يحمل البوزشن ريلتف صفر ب صفر حتى تبدي من البداية 
+    الطول والعرض حتى تملي الشاشة كلها 
+    هاي الالوان بالعادة تجيك جاهزة من المصمم 
+    */
+}
+
+
+.landing-page .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* هاي تخلي الطول على طول الشاشة  */
+    justify-content: center;
+    position: relative;
+  z-index: 10000;
+  /* الزي اندكس هاي شغلته يخلي العنصر بالمقدمة ليكدام يخليهن ما يشتغل الا وياه البوزشن ريلتف */
+  text-transform: capitalize;
+  width: fit-content;
+  /* هاي تخلي عرض الحبشكلات نفس يخلص على كد المحتوى */
+}
+.landing-page .container h1{
+    font-size: 55px;
+    color: #161616;
+
+}
+.landing-page .container p{
+    font-size: 20px;
+    letter-spacing: 6px;
+    /* هاي تخلي مسافة بين الكلام  */
+    color: #111;
+    opacity: 0.9;
+    /* هاي شغلتها تتحكم بوضوح الكلام */
+    margin-bottom: 20px;
+}
+.landing-page .container .haider{
+    color: black;
+}
+.landing-page .container button{
+    border: solid black 1px;
+    width: 140px;
+    height: 38px;
+    text-align: center;
+    background-color: #532668;
+    color: white;
+    border-radius: 18px;
+    cursor: pointer;
+    /* هاي تخلي الشي الي تخلي الماوس عليه تطلع بيه الايد كانو فد شي ينضغط */
+}
+
+.landing-page .container button:hover{
+    background-color: white;
+    color: #532668;
+}
+
+
+
+
+/* Big */
+@media (max-width: 1200px) {
+}
+
+/* Meidium */
+@media (max-width: 992px) {
+}
+
+
+/* Small */
+@media (max-width: 768px) { 
+    .landing-page .container {
+        align-items: center;
+        text-align: center;
+    }
+    .landing-page .container h1{
+        font-size: 40px;
+
+    }
+    .landing-page .container p{
+        font-size: 15px;
+    }
+    .landing-page .container button{
+        width: 120px;
+    }
+}
+
+
+
+
+
+
+
+/* ==========end landing page=========== */
+
+/* ================strart about============== */
+
+.about .container{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    margin-bottom: 7rem;
+}
+
+.about .container .img-container{
+width: 290px;
+}
+
+.about .container .img-container img{
+    width: 100%;
+}
+/* هاي الطريقة كلش زينة اول شي خليت عرض الصورة 100 بالنسبة للدف هيج صارت انوب رحت للدف غير حجمه هاي الطريقة احسن وارتب  */
+
+
+.about .container .content h3{
+    font-size: 15px;
+    color: #222;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-block: 3px;
+}
+
+
+.about .container .content h2{
+  font-size: 30px;
+  color: #695aa6;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+
+ 
+
+
+}
+
+.about .container .content p{
+    font-size: 15px;
+    color: #222;
+    font-weight: 300;
+    margin-block: 3px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about .container .content button{
+    border: solid black 1px;
+    width: 140px;
+    height: 38px;
+    text-align: center;
+    background-color: #532668;
+    color: white;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.about .container .content button:hover{
+    background-color: white;
+    color:#532668;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Big */
+@media (max-width: 1200px) {
+}
+
+/* Meidium */
+@media (max-width: 992px) {
+}
+
+
+/* Small */
+@media (max-width: 768px) { 
+.about .container{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: none;
+    justify-items: center;
+    text-align: center;
+}
+}
+
+
+/* ==============end about=============== */
+
+
+
+
+
+
+
+/* =========start portfolio============ */
+.portfolio .container{
+    text-align: center;
+}
+.portfolio .container h3{
+font-size: 32px;
+font-family: "Baloo paaji", cursive ;
+text-transform: capitalize;
+color: #532668;
+}
+
+.portfolio .container p{
+    font-size: 14px;
+    font-family: "Baloo paaji", cursive ;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+
+
+}
+
+.portfolio .container .box-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio .container .box-container .box{
+    height: 200px;
+}
+
+.portfolio .container .box-container .box img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.portfolio .container .box-container .parent-box{
+    position:relative;
+    width: 30%;
+}
+
+.portfolio .container .box-container .box-new{
+    opacity: 0;
+    pointer-events: none;
+background-color: rgba(213, 191, 191, 0.82);;
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.portfolio .container .box-container .box-new h4{
+
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "Baloo paaji", cursive ;
+    color: #695aa6;
+    margin: 0.5rem;
+}
+
+
+
+.portfolio .container .box-container .box-new a{
+    color: black;
+}
+
+.portfolio .container .box-container .parent-box:hover .box-new{
+opacity: 1;
+pointer-events: auto;
+}
+
+/* هسه خية خاف انلاصت يمك اول شي سوينا دف تحمل الصورة والكتابة وخلينا بيه بوزشن ريلتف وخلينا بدف الكتابة بوزشن ابسولت حتى نحركها 
+براحتنا وسنترناها عن طريق الفلسك ايتم سنتر 
+وراها خفيناها استخدمنا كود ال 
+opacity"0"
+هاي خفيناها بس بقت شغلة من اخلي الماوس عليها يبين لان بس خفيناها ما شلناها 
+استخدمنا كود البينتر 
+وراها بالهوفر بالبداية خلينا الهوفر على البيرنت بوكس وكلناله التغيير يصير على البوكس نيو وعلينا 
+الاوباسيتي والبونتر
+*/
+
+/* Big */
+@media (max-width: 1200px) { 
+}
+
+/* Meidium */
+@media (max-width: 992px) { 
+}
+
+/* Small */
+@media (max-width: 768px) { 
+.portfolio .container .box-container{
+     flex-direction: row;
+    }
+    .portfolio .container .box-container .parent-box{
+        width: 70%;
+}
+.portfolio .container .box-container .box-new{
+    opacity: 1;
+    background-color: #aca8b965;
+}
+.portfolio .container .box-container .box-new h4{
+    color: #111;
+}
+}
+
+
+
+/* =========end portfolio============ */
+
+
+
+
+
+/* ==========start blue section========== */
+
+.blue-section{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background: #695aa6;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.blue-section .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.blue-section .container .left p{
+    font-size: 21px;
+    color: white;
+    text-transform: capitalize;
+    
+
+}
+.blue-section .container .left .first-section{
+    font-family: "Baloo paaji", cursive ;
+
+}
+.blue-section .container .right button {
+    border: solid #fff 1px;
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    color: #532668;
+    border-radius: 18px;
+    cursor: pointer;
+    font-family: "Baloo paaji", cursive ;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+/* Big */
+@media (max-width: 1200px) {
+}
+
+/* Meidium */
+@media (max-width: 992px) {
+}
+
+
+/* Small */
+@media (max-width: 768px) { 
+.blue-section .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+}
+
+
+
+/* ==========end blue section========== */
+
+
+
+/* ============start testimonial============  */
+.testi-section .container{
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.testi-section .container .parent-item{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.testi-section .container h3{
+    font-size: 32px;
+    font-family: "Baloo paaji", cursive ;
+    color: #695aa6;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.testi-section .container h5{
+    font-size: 14px ;
+    margin-bottom: 6px;
+    font-weight: 400;
+    opacity: 0.6;
+    letter-spacing: 0.6px;
+}
+
+
+.testi-section .container .parent-item .first{
+    border: solid 2px black;
+    padding: 27px 35px ;
+    width: 50%;
+    display: flex;
+    flex-direction:row-reverse ;
+    align-items: center;
+    position: relative;
+      width: 57%;
+}
+
+
+.testi-section .container .parent-item .first .img-container{
+    width: 70px;
+    position: absolute;
+    left: -14%;
+    top: 36%;
+}
+
+.testi-section .container .parent-item .first .img-container img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Big */
+@media (max-width: 1200px) {
+}
+
+/* Meidium */
+@media (max-width: 992px) {
+}
+
+
+/* Small */
+@media (max-width: 768px) { 
+.testi-section .container .parent-item{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+.testi-section .container .parent-item .first {
+    width: 100%;
+}
+}
+/* هنا حاولت اخلي الصورة بالوسط بس مارهمت */
+/* ============end testimonial============  */
+
+/* ===========start contact me============ */
+
+
+.contact-section .container {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10rem;
+}
+
+.contact-section .container .text h5{
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 400;
+    opacity: 0.6;
+    letter-spacing: 0.6px;
+}
+.contact-section .container .text h1{
+  font-size: 32px;
+  font-family: "Baloo paaji", cursive;
+  color: #695aa6;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.contact-section .container .input-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+.contact-section .container .input-container input{
+    width: 317px;
+    height: 50px;
+}
+
+.contact-section .container .input-container form button{
+    border: solid black 1px;
+  width: 140px;
+  height: 38px;
+  text-align: center;
+  background-color: #532668;
+  color: white;
+  border-radius: 18px;
+  cursor: pointer;
+  position: absolute;
+  top: 390px;
+  left: 90px;
+}
+
+/* Big */
+@media (max-width: 1200px) { 
+}
+
+/* Meidium */
+@media (max-width: 992px) { 
+}
+
+/* Small */
+@media (max-width: 768px) { 
+    .contact-section .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+ 
+/* ============end contact============== */
+
+
