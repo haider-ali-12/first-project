@@ -157,7 +157,7 @@ body{
 
 /*  =========start landing page========= */
 .landing-page{
-background-image: url('./img/back.jpg');
+background-image: url(./img/back.jpg);
 /* هاي تخلي الصورة بالخلفية اليوارال هاي مثل ال دبليو دبليو دبليو دوت ورها تجي الاقواس  */
 background-size: cover;
 background-position: center;
